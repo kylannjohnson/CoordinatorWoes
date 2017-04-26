@@ -1,0 +1,17 @@
+*.sw?
+.idea
+local.properties
+*.iml
+build/
+nohup.out
+.gradle/
+captures/
+**/.gen/
+**/.buildProfile/
+*.hprof
+*.trace
+ajcore.*.txt
+.DS_Store
+.directory
+jenkins_json.cache
+hs_err_pid*.log
