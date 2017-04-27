@@ -1,8 +1,8 @@
-# Keyboard inset not cleared
-This repo is only intended to showcase a potential bug regarding the combination of CoordinatorLayout, AppBarLayout, and a custom App ToolBar.
+# Keyboard inset not cleared on > API 25
+This repo is only intended to showcase a potential bug regarding the combination of CoordinatorLayout, AppBarLayout, and a custom App ToolBar on Nougat devices (and above)
 
 ## The Potential Bug
-When disabling the standard ActionBar in the app theme via `<item name="windowActionBar">false</item>`, the system will not honor the IME settings for 
+When disabling the standard ActionBar in the app theme via `<item name="windowActionBar">false</item>`, the system will not honor the IME settings for
 an Activity marked as `android:windowSoftInputMode="adjustResize|stateHidden"` when recalling and app from the background (e.g. after home button press)
 
 ### To Reproduce
@@ -27,4 +27,3 @@ Here we find the toggle for `windowActionBar` and `windowNoTitle`. We set these 
 ToolBar.  You can find a representation of that ToolBar in the activity layout as a standard Support ToolBar (which is what we extend).  
 
 If the window ActionBar is used, then the bug shows. If the custom one is used (and the window ActionBar turned off), we see the expected behavior.
-
